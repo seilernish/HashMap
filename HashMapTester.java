@@ -90,7 +90,7 @@ public class HashMapTester {
 	public void KentNoahDelta() {
 		assertNull("assert#1",map.get("Hello world!"));
 		assertNull("assert#2",map.remove("Hello world!"));
-		assertTrue("assert#3", map.size()>=0 );
+		assertTrue("assert#3", map.size()==0 );
 	}
 	
 	@Test
