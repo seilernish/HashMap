@@ -94,6 +94,16 @@ public class HashMapTester {
 	}
 	
 	@Test
+	public void kieselTestAlpha() {
+	  map.put("K1",2018);
+	  for ( int i = 2; i < 20002; i++)
+	  {
+	    assertNull("assert#1",map.get("K"+i));
+	  }
+	  assertNotNull("assert#2",map.get("K1"));
+	}
+	
+	@Test
 	public void evilKieselTest() {
 		metaPyramid(1, 60);
 	}
