@@ -7,12 +7,12 @@ public class TestRunner {
     Result result = JUnitCore.runClasses(HashMapTester.class);
     
     for (Failure failure : result.getFailures()) {
-      System.out.println(failure.toString());
+      System.out.println(failure.getTrace());
     }
     
     if ( result.wasSuccessful() )
       System.out.println("All tests successful.");
     else
-      System.out.println("There were problems.");
+      System.out.println("There were problems. " + result.getFailureCount() + " failures out of " + result.getRunCount() + " tests run.");
   }
 }
